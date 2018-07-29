@@ -10,7 +10,7 @@
 <body>
     <ul>
         {% for pessoa in pessoas %}
-            <li>{{ pessoa.first_name }}</li>
+            <li><a href="{% url 'pessoa_update' pessoa.id %}">{{ pessoa.first_name }}</a></li>
         {% endfor %}
     </ul>
     <a href="{% url 'pessoa_new' %}">Adicionar</a>
